@@ -18,7 +18,7 @@
 </head>
 <body class="page">
   <header class="header">
-    <a href="#" class="header__logo">&lt;/html&gt;</a>
+    <a tabindex="-1" class="header__logo">&lt;/html&gt;</a>
     <h1 class="header__subtitle">закрывающий тег</h1>
     <nav class="theme-menu header__theme-menu">
       <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
@@ -389,7 +389,7 @@
           <use href="./svg/floppy.svg#floppy">
           </use>
         </svg>
-        <span class="dialog__text">Вставьте дискету, чтобы продолжить</span>
+        <span class="dialog__text"><p>Вставьте дискету, чтобы продолжить</p></span>
       </div>
       <button type="submit" onclick="window['dialog-id'].close();" class="button dialog__button">
         <span class="button__text">ok</span>

@@ -19,7 +19,7 @@
   min-block-size: 100dvb;
   display: grid;
   place-content: center;
-  font-family: var(--main-font, "Inter", sans-serif);
+  font-family: var(--main-font, "Inter", fantasy);
   font-variation-settings: "wght" var(--weight-text, 400);
   color: var(--accent-color, #000);
   background-color: var(--bg-color, #fff);
@@ -43,7 +43,7 @@
 
 .header__logo,
 .header__subtitle {
-  font-family: var(--accent-font, "PressStart2P", sans-serif);
+  font-family: var(--accent-font, "PressStart2P", fantasy);
   text-transform: uppercase;
   text-align: center;
   line-height: 1;
@@ -81,7 +81,7 @@
   background-color: transparent;
   border: none;
   font-size: var(--button-font-size);
-  font-family: var(--accent-font, "PressStart2P", sans-serif);
+  font-family: var(--accent-font, "PressStart2P", fantasy);
   font-weight: var(--main-font);
   line-height: 1;
   text-transform: uppercase;
@@ -195,15 +195,14 @@
 .card__image-text {
   display: flex;
   position: absolute;
-  font-family: var(--accent-font, "PressStart2P", sans-serif);
+  font-family: var(--accent-font, "PressStart2P", fantasy);
   font-size: 14px;
   font-weight: 400;
-  top: 25px;
-  right: clamp(25px, 0.5484rem + 1.1268vw, 13px);
+  top: 22px;
+  right: clamp(25px, 0.5484rem + 1.1268vw, 11px);
   color: var(--accent-color);
   opacity: 0.5;
   mix-blend-mode: hard-light;
-  -webkit-text-stroke: 1px var(--outline-color);
   text-shadow: -1px 0 var(--outline-color), 0 1px var(--outline-color),
     0 -1px var(--outline-color), 1px 0 var(--outline-color);
 }
@@ -272,7 +271,7 @@
   line-height: calc(12.6 / 14);
   background-color: var(--bg-color);
   font-size: var(--button-font-size);
-  font-family: var(--accent-font, "PressStart2P", sans-serif);
+  font-family: var(--accent-font, "PressStart2P", fantasy);
   font-weight: var(--main-font);
   cursor: pointer;
   appearance: none;
@@ -362,13 +361,12 @@
 
 .dialog::backdrop {
   background-color: rgb(0 0 0 / 0.75);
-  backdrop-filter: blur(2px);
 }
 
 .dialog__content {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 20px;
 }
 
 .dialog__floppy {
@@ -378,11 +376,12 @@
 }
 
 .dialog__text {
-  inline-size: 234px;
+  max-width: 234px;
+  width: 100%;
   color: var(--accent-color);
   font-size: var(--button-font-size);
   line-height: calc(21 / 14);
-  font-family: var(--accent-font, "PressStart2P", sans-serif);
+  font-family: var(--accent-font, "PressStart2P", fantasy);
   font-weight: var(--main-font);
   text-transform: uppercase;
 }
@@ -397,6 +396,11 @@
     inline-size: 100vw;
   }
 
+  .card__image-text {
+    top: 19px;
+    right: clamp(12px, 0.5484rem + 1.1268vw, 10px);
+  }
+
   .button__save {
     flex-direction: column;
   }
@@ -405,7 +409,11 @@
     inline-size: 28px;
   }
 
+  .dialog {
+    padding: 38px;
+  } 
   .dialog__text {
-    inline-size: 198px;
+    max-width: 198px;
+    width: 100%;
   }
 }
